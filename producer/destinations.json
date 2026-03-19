@@ -1,0 +1,154 @@
+{
+  "destinations": [
+    {
+      "id": "dest_001",
+      "name": "Shibuya, Tokyo",
+      "country": "Japan",
+      "lat": 35.6595,
+      "lon": 139.7004,
+      "pokestops_density": 9.5,
+      "spawns_density": 9.0,
+      "notes": "Top hotspot mundial, densidad extrema"
+    },
+    {
+      "id": "dest_002",
+      "name": "Santa Monica Pier, Los Angeles",
+      "country": "USA",
+      "lat": 34.0095,
+      "lon": -118.4975,
+      "pokestops_density": 9.0,
+      "spawns_density": 8.5,
+      "notes": "Pier con spawns costeros únicos"
+    },
+    {
+      "id": "dest_003",
+      "name": "Central Park, New York",
+      "country": "USA",
+      "lat": 40.7851,
+      "lon": -73.9683,
+      "pokestops_density": 9.2,
+      "spawns_density": 8.8,
+      "notes": "Clásico NYC, miles de stops"
+    },
+    {
+      "id": "dest_004",
+      "name": "Marina Bay, Singapore",
+      "country": "Singapore",
+      "lat": 1.2847,
+      "lon": 103.8610,
+      "pokestops_density": 8.8,
+      "spawns_density": 8.5,
+      "notes": "UTC+8, activo todo el día"
+    },
+    {
+      "id": "dest_005",
+      "name": "Circular Quay, Sydney",
+      "country": "Australia",
+      "lat": -33.8610,
+      "lon": 151.2113,
+      "pokestops_density": 8.5,
+      "spawns_density": 8.0,
+      "notes": "Puerto icónico, gran densidad"
+    },
+    {
+      "id": "dest_006",
+      "name": "Reforma, Ciudad de México",
+      "country": "Mexico",
+      "lat": 19.4270,
+      "lon": -99.1676,
+      "pokestops_density": 8.0,
+      "spawns_density": 7.8,
+      "notes": "CDMX, comunidad enorme"
+    },
+    {
+      "id": "dest_007",
+      "name": "Copacabana, Rio de Janeiro",
+      "country": "Brazil",
+      "lat": -22.9711,
+      "lon": -43.1822,
+      "pokestops_density": 8.2,
+      "spawns_density": 8.0,
+      "notes": "Playa con spawns de agua"
+    },
+    {
+      "id": "dest_008",
+      "name": "Millennium Park, Chicago",
+      "country": "USA",
+      "lat": 41.8827,
+      "lon": -87.6233,
+      "pokestops_density": 8.7,
+      "spawns_density": 8.3,
+      "notes": "El Bean y sus alrededores"
+    },
+    {
+      "id": "dest_009",
+      "name": "Tsim Sha Tsui, Hong Kong",
+      "country": "Hong Kong",
+      "lat": 22.2988,
+      "lon": 114.1722,
+      "pokestops_density": 9.1,
+      "spawns_density": 8.9,
+      "notes": "Zona costera, densidad top Asia"
+    },
+    {
+      "id": "dest_010",
+      "name": "Hyde Park, London",
+      "country": "UK",
+      "lat": 51.5073,
+      "lon": -0.1657,
+      "pokestops_density": 8.6,
+      "spawns_density": 8.1,
+      "notes": "Parque clásico europeo"
+    },
+    {
+      "id": "dest_011",
+      "name": "Champ de Mars, Paris",
+      "country": "France",
+      "lat": 48.8566,
+      "lon": 2.2922,
+      "pokestops_density": 8.4,
+      "spawns_density": 8.0,
+      "notes": "Torre Eiffel zone"
+    },
+    {
+      "id": "dest_012",
+      "name": "Darling Harbour, Sydney",
+      "country": "Australia",
+      "lat": -33.8723,
+      "lon": 151.1994,
+      "pokestops_density": 8.3,
+      "spawns_density": 7.9,
+      "notes": "Alternativa al Circular Quay"
+    },
+    {
+      "id": "dest_013",
+      "name": "Shinjuku Gyoen, Tokyo",
+      "country": "Japan",
+      "lat": 35.6852,
+      "lon": 139.7100,
+      "pokestops_density": 8.9,
+      "spawns_density": 8.7,
+      "notes": "Parque alternativo a Shibuya"
+    },
+    {
+      "id": "dest_014",
+      "name": "Grant Park, Chicago",
+      "country": "USA",
+      "lat": 41.8755,
+      "lon": -87.6189,
+      "pokestops_density": 8.5,
+      "spawns_density": 8.1,
+      "notes": "Cerca del lago Michigan"
+    },
+    {
+      "id": "dest_015",
+      "name": "Orchard Road, Singapore",
+      "country": "Singapore",
+      "lat": 1.3048,
+      "lon": 103.8318,
+      "pokestops_density": 8.6,
+      "spawns_density": 8.2,
+      "notes": "Segunda zona top de Singapore"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+
+  # ─────────────────────────────────────────
+  # ZOOKEEPER
+  # Kafka necesita Zookeeper para coordinar
+  # el cluster (quién es el líder, etc.)
+  # En Kafka moderno (2.8+) ya no es obligatorio,
+  # pero lo usamos porque es lo más común en empresas hoy.
+  # ─────────────────────────────────────────
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: poke-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+    networks:
+      - kafka-net
+
+  # ─────────────────────────────────────────
+  # KAFKA BROKER
+  # El "servidor" central donde viven los topics
+  # y los mensajes. En producción habría 3+ brokers.
+  # Por ahora uno es suficiente para aprender.
+  # ─────────────────────────────────────────
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: poke-kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'false'
+    networks:
+      - kafka-net
+
+  # ─────────────────────────────────────────
+  # KAFKA UI — Panel visual para explorar topics,
+  # mensajes, consumer groups y offsets.
+  # Esto es oro puro para aprender Kafka visualmente.
+  # ─────────────────────────────────────────
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: poke-kafka-ui
+    depends_on:
+      - kafka
+    ports:
+      - "8090:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: pokemon-local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:29092
+    networks:
+      - kafka-net
+
+networks:
+  kafka-net:
+    driver: bridge
